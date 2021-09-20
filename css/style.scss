@@ -172,7 +172,9 @@ h1 {
          );
         
 }
-
+.section-title{
+    color: $color-gray2;
+}
 h2{
     line-height: 1.4;
     @include text(
@@ -249,7 +251,7 @@ hr{
 .my-header{
     top: 0;
     left: 0;
-    height: 25vh;
+    height: 17vh;
     padding: $space-sm*2 $space-sm;
 
     .my-nav{
@@ -323,7 +325,7 @@ hr{
 
     @media (min-width:576px) {
         padding: $space-lg;
-        height: 25vh;
+        height: 20vh;
         .my-nav{
             flex-direction: row;
         }
@@ -343,7 +345,7 @@ hr{
 
 
     @media (min-width:576px) and (max-width:769px) {
-        height: 27vh;
+        height: 15vh;
         .logo{
             width: 35vw;
         }
@@ -360,7 +362,7 @@ hr{
 .banner{
     width: 100%;
     text-align: center;
-    height: 80vh;
+    height: 60vh;
     background: url('../img/paulo-dybala-juventus-2019-20_1d7jqc6tnjgxx1r0qucny2l6ev.png') no-repeat;
     background-color:rgba($color: $color-black, $alpha: 0.3);
     background-blend-mode:darken;
@@ -375,7 +377,7 @@ hr{
     }
 
     @media (min-width:576px) and (max-width:768px) {
-        height: 80vh;
+        height: 60vh;
     }
 
     
@@ -437,6 +439,13 @@ hr{
     margin: $space-sm 0 $space-sm*2 0;
     text-align: center;
 
+    hr{
+        height: 2px;
+        width: 100%;
+        color: $color-gray2;
+        opacity: 1;
+        }
+
 
 
     .show{
@@ -477,6 +486,14 @@ hr{
     padding: $space-sm;
     margin: $space-sm*3 0 $space-sm*2;
     text-align: center;
+
+
+    hr{
+        height: 2px;
+        width: 100%;
+        color: $color-gray2;
+        opacity: 1;
+        }
 
     .show{
         @include my-card();
@@ -526,6 +543,7 @@ hr{
     img{
         width: 28%;
         margin: 0 $space-sm/2;
+        height: 13vh;
     }
 
     @media (min-width:576px) {
@@ -535,8 +553,17 @@ hr{
         }
         img{
             margin: 0;
-            height: 30vh;
+            height: 20vh;
             margin: $space-lg 0;
+            width: 26%;
+        }
+    }
+
+
+    @media (min-width:576px) and (max-width:768px) {
+        img{
+            height: 18vh;
+
         }
     }
 }

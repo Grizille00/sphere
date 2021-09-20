@@ -15,6 +15,10 @@ h1 {
   }
 }
 
+.section-title {
+  color: #676666;
+}
+
 h2 {
   line-height: 1.4;
   font-family: "Panton-Bold";
@@ -135,7 +139,7 @@ hr {
 .my-header {
   top: 0;
   left: 0;
-  height: 25vh;
+  height: 17vh;
   padding: 2.5rem 1.25rem;
 }
 .my-header .my-nav {
@@ -243,7 +247,7 @@ hr {
 @media (min-width: 576px) {
   .my-header {
     padding: 3.125rem;
-    height: 25vh;
+    height: 20vh;
   }
   .my-header .my-nav {
     flex-direction: row;
@@ -261,7 +265,7 @@ hr {
 }
 @media (min-width: 576px) and (max-width: 769px) {
   .my-header {
-    height: 27vh;
+    height: 15vh;
   }
   .my-header .logo {
     width: 35vw;
@@ -271,7 +275,7 @@ hr {
 .banner {
   width: 100%;
   text-align: center;
-  height: 80vh;
+  height: 60vh;
   background: url("../img/paulo-dybala-juventus-2019-20_1d7jqc6tnjgxx1r0qucny2l6ev.png") no-repeat;
   background-color: rgba(17, 17, 17, 0.3);
   background-blend-mode: darken;
@@ -288,7 +292,7 @@ hr {
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .banner {
-    height: 80vh;
+    height: 60vh;
   }
 }
 
@@ -331,6 +335,12 @@ hr {
   padding: 1.25rem;
   margin: 1.25rem 0 2.5rem 0;
   text-align: center;
+}
+.entertain hr {
+  height: 2px;
+  width: 100%;
+  color: #676666;
+  opacity: 1;
 }
 .entertain .show {
   position: relative;
@@ -397,6 +407,12 @@ hr {
   padding: 1.25rem;
   margin: 3.75rem 0 2.5rem;
   text-align: center;
+}
+.sports hr {
+  height: 2px;
+  width: 100%;
+  color: #676666;
+  opacity: 1;
 }
 .sports .show {
   position: relative;
@@ -471,6 +487,7 @@ hr {
 .brands img {
   width: 28%;
   margin: 0 0.625rem;
+  height: 13vh;
 }
 @media (min-width: 576px) {
   .brands {
@@ -481,8 +498,14 @@ hr {
   }
   .brands img {
     margin: 0;
-    height: 30vh;
+    height: 20vh;
     margin: 3.125rem 0;
+    width: 26%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .brands img {
+    height: 18vh;
   }
 }
 
