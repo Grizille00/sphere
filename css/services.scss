@@ -3,6 +3,7 @@
 
 
 
+
 // Banner Section
 
 .banner{
@@ -16,10 +17,20 @@
 // Brand Development Section
 
 .brand-dev{
+
     @media (min-width:576px) {
-        margin: $space-lg*4 0;
+        margin: $space-lg 0;
         h2{
             width: 35%;
+        }
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        margin: $space-md;
+        padding: $space-md*2 $space-md;
+        h2{
+            width: 100%;
+            margin-bottom: $space-lg;
         }
     }
 }
@@ -41,11 +52,23 @@
     }
 
     @media (min-width:576px) {
-        padding: $space-lg*2 $space-lg $space-lg*4;
-       
+        padding: $space-lg*3 $space-lg ;
+       margin-top: 0;
         
         .about-inner{
             margin-top: 0;
+        }
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        margin: $space-md 0;
+        padding: $space-md*3 $space-md;
+        .about-inner{
+            margin-top: $space-md*2;
+        }
+
+        h2{
+            margin-bottom: $space-md;
         }
     }
 
@@ -57,7 +80,14 @@
 
 .portfolio{
   @media (min-width:576px) {
-      margin: $space-lg*4 0;
+      margin: $space-lg*2 0;
+  }
+
+  @media (min-width:576px) and (max-width:768px) {
+      margin: $space-md 0;
+      h2{
+        margin-bottom: $space-md;
+    }
   }
 }
 

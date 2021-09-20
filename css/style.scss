@@ -10,6 +10,7 @@ $color-dark:#000;
 $color-white:#eee;
 $color-gray:#FAFAFA;
 $color-gray1:#707070;
+$color-gray2:#676666;
 // Colors End
 
 @mixin my-card(){
@@ -50,13 +51,13 @@ $color-gray1:#707070;
         margin: 0;
         .overlay{
             padding: $space-lg/4 $space-lg/2 ;
-            opacity: 0;
+            opacity: 1;
         }
-        &:hover{
-            .overlay{
-                opacity: 1;
-            }
-        }
+        // &:hover{
+        //     .overlay{
+        //         opacity: 1;
+        //     }
+        // }
     }
     @media (min-width:576px) and (max-width:768px) {
         .overlay{
@@ -248,7 +249,7 @@ hr{
 .my-header{
     top: 0;
     left: 0;
-    height: 15vh;
+    height: 25vh;
     padding: $space-sm*2 $space-sm;
 
     .my-nav{
@@ -322,7 +323,7 @@ hr{
 
     @media (min-width:576px) {
         padding: $space-lg;
-        height: 20vh;
+        height: 25vh;
         .my-nav{
             flex-direction: row;
         }
@@ -342,6 +343,7 @@ hr{
 
 
     @media (min-width:576px) and (max-width:769px) {
+        height: 27vh;
         .logo{
             width: 35vw;
         }
@@ -372,6 +374,12 @@ hr{
         height: 100vh;
     }
 
+    @media (min-width:576px) and (max-width:768px) {
+        height: 80vh;
+    }
+
+    
+
 
     
 }
@@ -382,17 +390,22 @@ hr{
 // About Section
 .about{
     text-align: center;
-    margin: $space-sm*3 0 $space-sm*2;
+    margin: $space-sm*2 0 0;
     padding: $space-sm;
-    p,h2{
+    
+    .about-inner{
         margin-top: $space-sm /2;
+    }
+    p,hr{
+        color: $color-gray2;
     }
 
     @media (min-width:576px) {
         padding: $space-lg;
         text-align: left;
-        margin : $space-lg*3 0 ;
-        p,h2{
+        margin : $space-lg*2 0 0;
+       
+        .about-inner{
             margin-top: $space-lg;
         }
         .about-content{
@@ -408,6 +421,10 @@ hr{
         h2,.about-content{
             width: 100%;
         }
+
+        .about-inner{
+            text-align: center;
+        }
     }
 }
 
@@ -418,8 +435,10 @@ hr{
 
 .entertain{
     padding: $space-sm;
-    margin: $space-sm*3 0 $space-sm*2 0;
+    margin: $space-sm 0 $space-sm*2 0;
     text-align: center;
+
+
 
     .show{
         @include my-card();
@@ -432,6 +451,13 @@ hr{
         padding: $space-lg;
         text-align: left;
         margin : 0 ;
+        height: 80vh;
+
+        .entertain-inner{
+            padding: 0 $space-lg;
+        }
+
+
         p,h2{
             margin-top: $space-lg;
         }
@@ -462,8 +488,16 @@ hr{
 
     @media (min-width:576px) {
         padding: $space-lg;
+        margin-top: $space-lg*3;
         text-align: left;
-        margin : 0;
+        // margin : 0;
+
+        .sports-inner{
+            padding: 0 $space-lg;
+           
+        }
+
+
         p,h2{
             margin-top: $space-lg;
         }
@@ -481,7 +515,7 @@ hr{
 // Brands Section
 
 .brands{
-    padding: $space-sm*2 $space-sm/2 ;
+    padding: $space-sm $space-sm/2 $space-sm*2;
     .brands-inner{
         display: flex;
         flex-wrap: wrap;
@@ -490,18 +524,18 @@ hr{
     }
     
     img{
-        width: 33%;
+        width: 28%;
         margin: 0 $space-sm/2;
     }
 
     @media (min-width:576px) {
-        padding: $space-lg*3 $space-lg /2 0;
+        padding: $space-lg $space-lg /2 0;
         .brands-inner{
-            margin:$space-lg*3 0;
+            margin:$space-lg*2 0;
         }
         img{
             margin: 0;
-            height: 15vh;
+            height: 30vh;
             margin: $space-lg 0;
         }
     }

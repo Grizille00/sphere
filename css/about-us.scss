@@ -28,9 +28,26 @@
 // About Section
 .about{
     @media (min-width:576px) {
-        margin-bottom: $space-lg*2;
+        margin: $space-lg $space-lg;
         h2{
             width: 32%;
+        }
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        // text-align: center;
+        h2,.about-content{
+            width: 100%;
+        }
+
+        .about-inner{
+            text-align: center;
+        }
+        h2{
+            margin-bottom: $space-md;
+        }
+        .my-btn{
+            margin-top: $space-lg;
         }
     }
 }
@@ -46,12 +63,14 @@
 
     .my-btn{
         margin-top: $space-sm;
+        width: 45%;
     }
 
     @media (min-width:576px) {
-        padding: $space-lg*3 $space-lg $space-lg;
+        padding: $space-lg*2 $space-lg ;
         .my-btn{
             margin-top: $space-lg*2;
+            width: 25%;
         }
     }
 }
@@ -119,6 +138,20 @@
         }
 
     }
+
+    @media (min-width:576px) and (max-width:768px) {
+        .about-inner{
+            .context{
+                flex-direction: column;
+            }
+            ul{
+                width: 100%;
+            }
+            h2{
+                margin-bottom: $space-md;
+            }
+        }
+    }
 }
 // Talent Roster End
 
@@ -140,13 +173,38 @@
 
     @media (min-width:576px) {
         margin-bottom: $space-lg*2;
+        padding: $space-lg*2 $space-lg;
         .my-btn{
             width: 15%;
+            margin-top: $space-lg;
         }
         .about-inner{
             li{
                 margin-top: 10px;
             }
+            ul{
+                width: 45%;
+            }
+        }
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        .about-inner{
+            padding: $space-md/2 $space-md*2;
+            .context{
+                flex-direction: row;
+            }
+            h2,.context{
+                text-align: left;
+            }
+            ul{
+                width: 80%;
+            }
+
+        }
+
+        .my-btn{
+            width: 35%;
         }
     }
 }

@@ -135,7 +135,7 @@ hr {
 .my-header {
   top: 0;
   left: 0;
-  height: 15vh;
+  height: 25vh;
   padding: 2.5rem 1.25rem;
 }
 .my-header .my-nav {
@@ -243,7 +243,7 @@ hr {
 @media (min-width: 576px) {
   .my-header {
     padding: 3.125rem;
-    height: 20vh;
+    height: 25vh;
   }
   .my-header .my-nav {
     flex-direction: row;
@@ -260,6 +260,9 @@ hr {
   }
 }
 @media (min-width: 576px) and (max-width: 769px) {
+  .my-header {
+    height: 27vh;
+  }
   .my-header .logo {
     width: 35vw;
   }
@@ -283,22 +286,30 @@ hr {
     height: 100vh;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner {
+    height: 80vh;
+  }
+}
 
 .about {
   text-align: center;
-  margin: 3.75rem 0 2.5rem;
+  margin: 2.5rem 0 0;
   padding: 1.25rem;
 }
-.about p, .about h2 {
+.about .about-inner {
   margin-top: 0.625rem;
+}
+.about p, .about hr {
+  color: #676666;
 }
 @media (min-width: 576px) {
   .about {
     padding: 3.125rem;
     text-align: left;
-    margin: 9.375rem 0;
+    margin: 6.25rem 0 0;
   }
-  .about p, .about h2 {
+  .about .about-inner {
     margin-top: 3.125rem;
   }
   .about .about-content {
@@ -312,11 +323,14 @@ hr {
   .about h2, .about .about-content {
     width: 100%;
   }
+  .about .about-inner {
+    text-align: center;
+  }
 }
 
 .entertain {
   padding: 1.25rem;
-  margin: 3.75rem 0 2.5rem 0;
+  margin: 1.25rem 0 2.5rem 0;
   text-align: center;
 }
 .entertain .show {
@@ -354,9 +368,6 @@ hr {
   }
   .entertain .show .overlay {
     padding: 0.78125rem 1.5625rem;
-    opacity: 0;
-  }
-  .entertain .show:hover .overlay {
     opacity: 1;
   }
 }
@@ -370,6 +381,10 @@ hr {
     padding: 3.125rem;
     text-align: left;
     margin: 0;
+    height: 80vh;
+  }
+  .entertain .entertain-inner {
+    padding: 0 3.125rem;
   }
   .entertain p, .entertain h2 {
     margin-top: 3.125rem;
@@ -419,9 +434,6 @@ hr {
   }
   .sports .show .overlay {
     padding: 0.78125rem 1.5625rem;
-    opacity: 0;
-  }
-  .sports .show:hover .overlay {
     opacity: 1;
   }
 }
@@ -433,8 +445,11 @@ hr {
 @media (min-width: 576px) {
   .sports {
     padding: 3.125rem;
+    margin-top: 9.375rem;
     text-align: left;
-    margin: 0;
+  }
+  .sports .sports-inner {
+    padding: 0 3.125rem;
   }
   .sports p, .sports h2 {
     margin-top: 3.125rem;
@@ -445,7 +460,7 @@ hr {
 }
 
 .brands {
-  padding: 2.5rem 0.625rem;
+  padding: 1.25rem 0.625rem 2.5rem;
 }
 .brands .brands-inner {
   display: flex;
@@ -454,19 +469,19 @@ hr {
   align-items: center;
 }
 .brands img {
-  width: 33%;
+  width: 28%;
   margin: 0 0.625rem;
 }
 @media (min-width: 576px) {
   .brands {
-    padding: 9.375rem 1.5625rem 0;
+    padding: 3.125rem 1.5625rem 0;
   }
   .brands .brands-inner {
-    margin: 9.375rem 0;
+    margin: 6.25rem 0;
   }
   .brands img {
     margin: 0;
-    height: 15vh;
+    height: 30vh;
     margin: 3.125rem 0;
   }
 }
@@ -578,12 +593,24 @@ hr {
   background-image: url("../img/sabri-tuzcu-wunVFNvqhfE-unsplash.png");
 }
 
+.wea {
+  margin-bottom: 0;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .wea h2 {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.brands {
+  margin-top: 0;
+}
 .brands .my-btn {
   width: 53%;
 }
 @media (min-width: 576px) {
   .brands {
-    margin: 12.5rem 0;
+    margin: 3.125rem 0;
     padding: 0 3.125rem;
   }
   .brands .about-inner {
@@ -592,13 +619,13 @@ hr {
     justify-content: space-between;
   }
   .brands .about-inner .about-content {
-    width: 50%;
+    width: 34%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .brands .my-btn {
-    width: 40%;
+    width: 57%;
   }
   .brands .sider {
     display: flex;
@@ -608,5 +635,20 @@ hr {
   }
   .brands h2 {
     width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .brands .about-inner {
+    text-align: center;
+    margin: 0;
+    padding: 3.75rem 0;
+  }
+  .brands .about-inner .about-content {
+    margin: 1.875rem 0;
+    width: 100%;
+  }
+  .brands .my-btn {
+    margin: 1.875rem auto;
+    width: 35%;
   }
 }/*# sourceMappingURL=about-sphere.css.map */

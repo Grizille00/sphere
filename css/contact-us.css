@@ -283,22 +283,30 @@ hr {
     height: 100vh;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner {
+    height: 80vh;
+  }
+}
 
 .about {
   text-align: center;
   margin: 3.75rem 0 2.5rem;
   padding: 1.25rem;
 }
-.about p, .about h2 {
+.about .about-inner {
   margin-top: 0.625rem;
+}
+.about p, .about hr {
+  color: #676666;
 }
 @media (min-width: 576px) {
   .about {
     padding: 3.125rem;
     text-align: left;
-    margin: 9.375rem 0;
+    margin: 6.25rem 0 0;
   }
-  .about p, .about h2 {
+  .about .about-inner {
     margin-top: 3.125rem;
   }
   .about .about-content {
@@ -311,6 +319,9 @@ hr {
 @media (min-width: 576px) and (max-width: 768px) {
   .about h2, .about .about-content {
     width: 100%;
+  }
+  .about .about-inner {
+    text-align: center;
   }
 }
 
@@ -354,9 +365,6 @@ hr {
   }
   .entertain .show .overlay {
     padding: 0.78125rem 1.5625rem;
-    opacity: 0;
-  }
-  .entertain .show:hover .overlay {
     opacity: 1;
   }
 }
@@ -370,6 +378,10 @@ hr {
     padding: 3.125rem;
     text-align: left;
     margin: 0;
+    height: 80vh;
+  }
+  .entertain .entertain-inner {
+    padding: 0 3.125rem;
   }
   .entertain p, .entertain h2 {
     margin-top: 3.125rem;
@@ -419,9 +431,6 @@ hr {
   }
   .sports .show .overlay {
     padding: 0.78125rem 1.5625rem;
-    opacity: 0;
-  }
-  .sports .show:hover .overlay {
     opacity: 1;
   }
 }
@@ -433,8 +442,11 @@ hr {
 @media (min-width: 576px) {
   .sports {
     padding: 3.125rem;
+    margin-top: 9.375rem;
     text-align: left;
-    margin: 0;
+  }
+  .sports .sports-inner {
+    padding: 0 3.125rem;
   }
   .sports p, .sports h2 {
     margin-top: 3.125rem;
@@ -454,19 +466,19 @@ hr {
   align-items: center;
 }
 .brands img {
-  width: 33%;
+  width: 28%;
   margin: 0 0.625rem;
 }
 @media (min-width: 576px) {
   .brands {
-    padding: 9.375rem 1.5625rem 0;
+    padding: 3.125rem 1.5625rem 0;
   }
   .brands .brands-inner {
-    margin: 9.375rem 0;
+    margin: 6.25rem 0;
   }
   .brands img {
     margin: 0;
-    height: 15vh;
+    height: 30vh;
     margin: 3.125rem 0;
   }
 }
@@ -579,6 +591,9 @@ hr {
 }
 
 @media (min-width: 576px) {
+  .GIT {
+    margin: 6.25rem 0;
+  }
   .GIT h2 {
     width: 30%;
   }
@@ -587,6 +602,17 @@ hr {
   }
   .GIT .about-inner .about-content {
     width: 60%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .GIT .about-inner {
+    text-align: center;
+  }
+  .GIT .about-inner h2, .GIT .about-inner .about-content {
+    width: 100%;
+  }
+  .GIT .about-inner h2 {
+    margin-bottom: 1.875rem;
   }
 }
 
@@ -623,6 +649,9 @@ hr {
   width: 100%;
 }
 @media (min-width: 576px) {
+  .contact-details {
+    padding: 6.25rem 3.125rem;
+  }
   .contact-details .about-inner {
     flex-direction: row;
   }
@@ -636,6 +665,18 @@ hr {
   }
   .contact-details .about-inner ul {
     width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .contact-details .about-inner {
+    text-align: left;
+    padding: 1.875rem 3.75rem;
+  }
+  .contact-details .about-inner h2 {
+    text-align: left;
+  }
+  .contact-details .about-inner ul {
+    width: 60%;
   }
 }
 
@@ -658,13 +699,11 @@ hr {
 }
 .signup label {
   display: block;
+  margin-top: 3.75rem;
   width: 25%;
   font-family: #000;
   color: "Panton-Bold";
   font-size: 17px;
-}
-.signup label:not(:nth-child(1)) {
-  margin-top: 3.75rem;
 }
 @media (min-width: 576px) {
   .signup label {
@@ -690,12 +729,30 @@ hr {
   margin-top: 3.125rem;
 }
 @media (min-width: 576px) {
+  .signup {
+    padding: 6.25rem 3.125rem;
+  }
   .signup .my-form {
-    padding: 9.375rem 3.125rem 1.5625rem;
+    padding: 3.125rem 3.125rem 1.5625rem;
     width: 60%;
+  }
+  .signup .my-btn {
+    margin-top: 4.6875rem;
   }
   .signup input, .signup textarea {
     width: 75%;
     margin-top: 3.75rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .signup {
+    padding: 3.75rem 3.125rem 0;
+  }
+  .signup .my-form {
+    width: 100%;
+    padding: 1.875rem;
+  }
+  .signup .about-inner {
+    margin: 1.875rem;
   }
 }/*# sourceMappingURL=contact-us.css.map */

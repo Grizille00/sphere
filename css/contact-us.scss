@@ -13,6 +13,7 @@
 
 .GIT{
     @media (min-width:576px) {
+        margin: $space-lg*2 0;
         h2{
             width: 30%;
         }
@@ -23,6 +24,21 @@
             .about-content{
                 width: 60%;
             }
+        }
+    }
+
+
+    @media (min-width:576px) and (max-width:768px) {
+        // text-align: center;
+        .about-inner{
+            text-align: center;
+            h2,.about-content{
+                width: 100%;
+            }
+            h2{
+                margin-bottom: $space-md;
+            }
+    
         }
     }
 }
@@ -65,7 +81,7 @@
     }
 
     @media (min-width:576px) {
-        
+        padding: $space-lg*2 $space-lg;
         .about-inner{
             flex-direction: row;
             .context{
@@ -85,6 +101,19 @@
 
 
 
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        .about-inner{
+            text-align: left;
+            padding: $space-md $space-md*2;
+            h2{
+                text-align: left;
+            }
+            ul{
+                width: 60%;
+            }
+        }
     }
 
 }
@@ -116,9 +145,8 @@
     }
     label{
         display: block;
-        &:not(:nth-child(1)){
-            margin-top: $space-sm*3;
-        }
+        margin-top: $space-sm*3;
+
         width: 25%;
         @include text(
             $color-dark,
@@ -148,10 +176,15 @@
     }
 
     @media (min-width:576px) {
+        padding: $space-lg*2 $space-lg;
         .my-form{
-            padding: $space-lg*3 $space-lg $space-lg/2;
+            padding: $space-lg $space-lg $space-lg/2;
             width: 60%;
          
+        }
+
+        .my-btn{
+            margin-top: $space-lg*3/2;
         }
 
         input,textarea{
@@ -159,6 +192,18 @@
             margin-top: $space-sm*3;
         }
         
+    }
+
+    @media (min-width:576px) and (max-width:768px) {
+        padding: $space-md*2 $space-lg 0;
+        .my-form{
+            width: 100%;
+            padding: $space-md;
+        }
+
+        .about-inner{
+            margin: $space-md;
+        }
     }
 }
 

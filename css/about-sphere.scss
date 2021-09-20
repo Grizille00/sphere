@@ -9,17 +9,29 @@
 // Banner End
 
 
+.wea{
+    margin-bottom: 0;
+    @media (min-width:576px) and (max-width:768px) {
+        h2{
+            margin-bottom: $space-md;
+        }
+    }
+}
+
+
 // Brands Section
 
 .brands{
+    margin-top: 0;
     .my-btn{
         width: 53%;
+        // width: 1.375rem /* 22/16 */;
     }
 
    
 
     @media (min-width:576px) {
-        margin: $space-lg*4 0;
+        margin: $space-lg 0;
         padding: 0 $space-lg;
         .about-inner{
             padding: $space-lg $space-lg/2;
@@ -27,7 +39,7 @@
             justify-content: space-between;
             
             .about-content{
-                width: 50%;
+                width: 34%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -35,7 +47,7 @@
     
         }
         .my-btn{
-            width: 40%;
+            width: 57%;
         }
 
         .sider{
@@ -49,6 +61,29 @@
         h2{
             width: 100%;
         }
+    }
+
+
+    @media (min-width:576px) and (max-width:768px) {
+        .about-inner{
+            text-align: center;
+            margin: 0;
+            padding: $space-md*2 0;
+
+            .about-content{
+                margin: $space-md 0;
+                width: 100%;
+            }
+
+        }
+        .my-btn{
+            margin: $space-md auto;
+            width: 35%;
+        }
+
+        
+
+        
     }
 }
 
