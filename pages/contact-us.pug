@@ -1,0 +1,173 @@
+mixin btn(cls,text)
+    button.my-btn(type=cls)
+        span=text 
+        i.bi.bi-arrow-right
+
+mixin content(items)
+    for x in items 
+        .context    
+            h2=x[0] 
+            ul 
+                for y in x[1]
+                    li 
+                        span=y
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sphere
+        link(rel="stylesheet", href="../fonts/stylesheet.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        link(rel="stylesheet", href="../bsi/bootstrap-icons.css")
+        link(rel="stylesheet", href="../css/contact-us.css")
+    body
+        //- Header Section
+        header.position-absolute.w-100.my-header.d-flex.justify-content-between.align-items-center
+            .hamburger
+                span 
+                span 
+                span 
+            nav.my-nav 
+                ul.links-main
+                    li
+                        a(href="../index.html") Portfolio
+                    li
+         
+                        a(href="./about-us.html") About Us
+                    li
+                        a(href="./services.html")  Services
+
+                ul.small-links
+                    li
+                        a(href="#") Contact Us 
+                    li
+                        a(href="./about-sphere.html") Talent Roster
+
+            img.logo(src="../img/logo2.png", alt="")
+        //- Header End
+
+
+        //- Preloader
+        #preloader
+            .sk-three-bounce
+                .sk-child.sk-bounce1
+                .sk-child.sk-bounce2
+                .sk-child.sk-bounce3
+
+        //- Banner Section
+        section.banner.d-flex
+            h1. 
+                Contact Us
+
+        //- Banner End
+
+
+        //- Get In Touch Section
+        section.about.GIT   
+            p.section-title Get in touch 
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                h2. 
+                    Take the next step,
+                    develop your brand
+                    or talent
+
+                .about-content 
+                    p. 
+                       Positioned at the nexus of talent, content, brands, technology, sports, 
+                        and live events, Sphere creates limitless opportunities for the storytellers, 
+                        trendsetters, icons, and thought leaders who shape popular culture.
+
+
+                    p. 
+                        Across film, television, music, sports, digital media, marketing, and
+                        beyond, we represent thousands of the world’s leading actors, 
+                        directors, writers, producers, musical artists, comedians, authors, 
+                        athletes, coaches, broadcasters, teams, leagues, chefs, 
+                        designers, fashion talent, consumer brands, and more.
+
+                    +btn("./services.pug", "Services")
+        //- GIT  End
+
+       
+
+        //- Contact Details Section
+
+        section.about.talent-roster.contact-details 
+            p Contact Us
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                +content(
+                    [
+                        [
+                            "Address",
+                            [
+                                "268 Cedar Court",
+                                "Centereach, NY 1172",
+                                ]
+                        ],
+                        [
+                            "Tel",
+                            [
+                                " 202-555-0197 · 202-555-0131 · 202-555-0183.",
+                                " 202-555-0197 · 202-555-0131 · 202-555-0183.",
+                                ]
+                        ],
+                        [
+                            "Email",
+                            [
+                                "talent@sphere.com",
+                                "enquiry@sphere.com",
+                               ]
+                        ]
+                    ]
+                ) 
+
+
+
+
+        //- Contact End
+
+
+        //- SignUp Section
+
+        section.about.signup 
+            p Get in touch with Sphere
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                form.my-form(action="#")
+                    label(for="txtName") Name
+                    input(type="text", name="txtName")
+
+                    label(for="txtEmail") Email
+                    input(type="text", name="txtEmail")
+
+                    label(for="txtMsg") Message
+                    textarea(name="txtMsg") 
+
+                    +btn("submit", "Submit")
+
+
+
+        //- SignUp End
+
+         //- Footer Section
+        footer.my-footer 
+            .logo
+                img.img-fluid(src="../img/logo1.png", alt="")
+            hr
+            nav.footer-nav
+                a(href="#") Contact Us 
+                a(href="") Portfolio
+                a(href="") For Brands
+                a(href="") For Talent 
+        //- Footer End
+
+
+        script(src="../js/jquery-2.2.0.min.js")
+        script(src="../js/bootstrap.bundle.min.js") 
+        script(src="../js/main.js") 

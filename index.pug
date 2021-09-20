@@ -1,0 +1,210 @@
+mixin card(im,name,title)
+    .show.position-relative 
+        img(src=im, alt=name)
+        .overlay.position-absolute.w-100 
+            span=name 
+            hr
+            h5.text-end=title 
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sphere
+        link(rel="stylesheet", href="./fonts/stylesheet.css")
+        link(rel="stylesheet", href="./css/bootstrap.min.css")
+        link(rel="stylesheet", href="./css/style.css")
+    body
+        //- Header Section
+        header.position-absolute.w-100.my-header.d-flex.justify-content-between.align-items-center
+            .hamburger
+                span 
+                span 
+                span 
+            nav.my-nav 
+                ul.links-main
+                    li
+                        a(href="#") Portfolio
+                    li
+         
+                        a(href="pages/about-us.html") About Us
+                    li
+                        a(href="pages/services.html")  Services
+
+                ul.small-links
+                    li
+                        a(href="pages/contact-us.html") Contact Us 
+                    li
+                        a(href="pages/about-sphere.html") Talent Roster
+
+            img.logo(src="./img/logo.png", alt="")
+        //- Header End
+
+        //- Preloader
+        #preloader
+            .sk-three-bounce
+                .sk-child.sk-bounce1
+                .sk-child.sk-bounce2
+                .sk-child.sk-bounce3
+
+        //- Banner Section
+        section.banner.d-flex
+            h1 Management Portfolio
+
+        //- Banner End
+
+
+
+        //- About Section
+
+        section.about   
+            p.section-title Sphere Management Portfolio
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                h2. 
+                    Managing a vast range
+                    of talent from sport 
+                    to entertainment
+                .about-content 
+                    p. 
+                        We manage talent from vast sectors which include arts and entertainment
+                        as well as the world of sporting.
+                    p. 
+                        Our portfolio brands include NBA team Dallas Mavericks, Italian football
+                        giants AS Roma, the massive sports giant Nike, offroading lifers Jeep,
+                        53 time top 100 billboard song producers Interscope Records as well as
+                        A Kevin Hart Film. 
+
+
+
+        //- About End
+
+
+        //- Entertain Section
+
+        section.entertain
+            p.section-title Entertainment
+            hr.rule
+            .container 
+                .row.gy-4.gx-4 
+                    .col-lg-4.col-md-6  
+                        +card(
+                            "./img/NoPath - Copy (13).png",
+                            "Dave Moss",
+                            "Motivational Speaker"
+                        )
+
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/NoPath - Copy (17).png",
+                            "Ella Mai",
+                            "Singer & Songwriter"
+                        )
+                    .col-lg-4.col-md-6  
+                        +card(
+                            "./img/NoPath - Copy (12).png",
+                            "Tiffany Haddish",
+                            "Actress & Comedian"
+                        )
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/issa.png",
+                            "Issa Rae",
+                            "Actress & Writer"
+                        ) 
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/https___hypebeast.com_image_2020_03_donald-glover-surprise-album-drop-01.png",
+                            "Donald Glover",
+                            " Actor & Singer"
+                        )  
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/NoPath - Copy (5).png",
+                            "Maximilian Mundt",
+                            "Actress & Writer"
+                        )   
+
+        //- Entertain End
+
+
+        //- Sports Section
+
+        section.sports 
+            p.section-title Sports
+            hr.rule
+            .container 
+                .row.gy-4.gx-4 
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/dzeko.png",
+                            "Edin Džeko",
+                            "A.S. Roma Forward"
+                        )
+
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/NoPath - Copy (7).png",
+                            "Hyun-soo Kim",
+                            "LG Twins Outfielder"
+                        )
+                    .col-lg-4.col-md-6  
+                        +card(
+                            "./img/NoPath - Copy (15).png",
+                            "Odell Beckham",
+                            " Cleveland Browns Wide Reciever"
+                        )
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/hi-res-1952a7a0bcfca5e1abf34dcdb6c750e2_crop_north.png",
+                            "Paulo Dybala",
+                            "Juventus F.C forwardr"
+                        ) 
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/NoPath - Copy (14).png",
+                            "Shelly-Ann Fraser-Pryce",
+                            "Track and field sprinter"
+                        )  
+                    .col-lg-4.col-md-6 
+                        +card(
+                            "./img/NoPath - Copy (10).png",
+                            "Marie-Philip Poulin",
+                            "PWHPA Forward"
+                        )   
+
+
+        //- Sports End
+
+        //- Brands Section
+        section.brands 
+            p Assosiate Brands
+            hr
+            .container 
+                .brands-inner
+                    img(src="./img/21st-Century-Fox-Logo-PNG-HD.png", alt="")
+                    img(src="./img/180px-AS_Roma_logo_(2017).svg.png", alt="")
+                    img(src="./img/unnamed.png", alt="")
+                    img(src="./img/download (2).png", alt="")
+                    img(src="/img/download.png", alt="")
+                    img(src="./img/download (1).png", alt="")
+        //- Brands End
+
+
+        //- Footer Section
+        footer.my-footer 
+            .logo
+                img.img-fluid(src="./img/logo1.png", alt="")
+            hr
+            nav.footer-nav
+                a(href="pages/contact-us.html") Contact Us 
+                a(href="./index.html") Portfolio
+                a(href="pages/services.html") For Brands
+                a(href="pages/about-sphere.html") For Talent 
+        //- Footer End
+        script(src="./js/jquery-2.2.0.min.js") 
+        script(src="./js/bootstrap.bundle.min.js") 
+        script(src="./js/main.js") 

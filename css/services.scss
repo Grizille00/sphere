@@ -1,0 +1,65 @@
+@import 'style';
+
+
+
+
+// Banner Section
+
+.banner{
+    background-image: url('../img/NoPath - Copy (18).png');
+}
+
+// Banner End
+
+
+
+// Brand Development Section
+
+.brand-dev{
+    @media (min-width:576px) {
+        margin: $space-lg*4 0;
+        h2{
+            width: 35%;
+        }
+    }
+}
+
+// Brand Dev End
+
+
+// Financial Section
+
+.financial{
+    background-color: $color-dark;
+    padding: $space-sm*2 $space-sm/2;
+    margin-bottom: 0;
+    p,hr,h2{
+        color: $color-white;
+    }
+    .about-inner{
+        margin-top: $space-sm;
+    }
+
+    @media (min-width:576px) {
+        padding: $space-lg*2 $space-lg $space-lg*4;
+       
+        
+        .about-inner{
+            margin-top: 0;
+        }
+    }
+
+}
+
+// Financial End
+
+// Portfolio Section
+
+.portfolio{
+  @media (min-width:576px) {
+      margin: $space-lg*4 0;
+  }
+}
+
+// Portfolio End
+

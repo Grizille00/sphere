@@ -1,0 +1,165 @@
+@import 'style';
+
+// Banner Section
+
+.banner{
+    background-image: url('../img/pexels-fauxels-3184306.png');
+}
+
+// Banner End
+
+
+// GIT Section
+
+.GIT{
+    @media (min-width:576px) {
+        h2{
+            width: 30%;
+        }
+
+        
+        .about-inner{
+            justify-content: space-between;
+            .about-content{
+                width: 60%;
+            }
+        }
+    }
+}
+
+// GIT End
+
+
+// Contact Details Section
+.contact-details{
+    background-color: $color-gray;
+    margin-bottom: 0;
+    .about-inner{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .context{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: $space-sm 0;
+        }
+        h2{
+            margin: 0;
+            margin-bottom: $space-sm;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        li{
+            width: 100%;
+        }
+    }
+
+    @media (min-width:576px) {
+        
+        .about-inner{
+            flex-direction: row;
+            .context{
+                flex-direction: row;
+                margin: $space-lg*4/5 0;
+            }
+            
+            h2{
+                margin: 0;
+                text-align: center;
+            }
+            ul{
+                width: 50%;
+            }
+            
+        }
+
+
+
+    }
+
+}
+
+// COntact Details End
+
+
+// Form Section
+
+.signup{
+    margin: 0;
+    // padding: $space-lg*4 $space-lg;
+
+    .about-inner{
+        background: url('../img/1010cbcd7a5e4bf62ce63d5fa6cd29a6.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+
+    }
+
+    .my-form{
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    label{
+        display: block;
+        &:not(:nth-child(1)){
+            margin-top: $space-sm*3;
+        }
+        width: 25%;
+        @include text(
+            $color-dark,
+            $text-bold,
+            17px,
+            22px,
+            29px
+        );
+    }
+    input,textarea{
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid $color-gray1;
+        
+       
+    }
+    input{
+        &:first-child{
+            margin: 0;
+        }
+    }
+
+    .my-btn{
+        margin-top: $space-lg;
+    }
+
+    @media (min-width:576px) {
+        .my-form{
+            padding: $space-lg*3 $space-lg $space-lg/2;
+            width: 60%;
+         
+        }
+
+        input,textarea{
+            width: 75%; 
+            margin-top: $space-sm*3;
+        }
+        
+    }
+}
+
+// Form End

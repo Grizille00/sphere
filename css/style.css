@@ -1,0 +1,576 @@
+h1 {
+  line-height: 1.4;
+  font-family: "Panton-SemiBold";
+  color: #eee;
+  font-size: 1.875rem;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 3.3125rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  line-height: 1.4;
+  font-family: "Panton-Bold";
+  color: #111;
+  font-size: 1.5625rem;
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  h2 {
+    font-size: 2.1875rem;
+  }
+}
+
+h5 {
+  line-height: 1.4;
+  font-family: "Panton-SemiBold";
+  color: #eee;
+  font-size: 0.6875rem;
+}
+@media (min-width: 576px) {
+  h5 {
+    font-size: 1.0625rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  h5 {
+    font-size: 0.875rem;
+  }
+}
+
+a {
+  font-family: "Panton-Regular";
+  color: #eee;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 400ms ease;
+  opacity: 0.9;
+}
+@media (min-width: 576px) {
+  a {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  a {
+    font-size: 1.375rem;
+  }
+}
+a:hover {
+  color: #eee;
+  opacity: 1;
+}
+
+p, span {
+  line-height: 1.4;
+  font-family: "Panton-Bold";
+  color: #111;
+  font-size: 0.875rem;
+}
+@media (min-width: 576px) {
+  p, span {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  p, span {
+    font-size: 1.1875rem;
+  }
+}
+
+.my-btn {
+  background-color: #000;
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  margin-top: 1.25rem;
+  border: none;
+  outline: none;
+}
+.my-btn span {
+  margin-right: 0.625rem;
+}
+.my-btn span, .my-btn i {
+  color: #eee;
+}
+@media (min-width: 576px) {
+  .my-btn {
+    margin-top: 3.125rem;
+    width: 25%;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+hr {
+  width: 100%;
+  height: 0.125rem;
+  opacity: 1;
+}
+
+.my-header {
+  top: 0;
+  left: 0;
+  height: 15vh;
+  padding: 2.5rem 1.25rem;
+}
+.my-header .my-nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #111;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms ease-in 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.my-header .my-nav.open {
+  visibility: visible;
+  opacity: 1;
+}
+.my-header .hamburger {
+  position: relative;
+  z-index: 2;
+  height: 3.125rem;
+  width: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.my-header .hamburger span {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #eee;
+  display: block;
+  border-radius: 0.3125rem;
+  transition: 400ms ease;
+  position: relative;
+  opacity: 1;
+  top: 0;
+}
+.my-header .hamburger.open span:nth-child(2) {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.my-header .hamburger.open span:nth-child(1) {
+  top: 30%;
+  transform: rotateZ(-45deg);
+}
+.my-header .hamburger.open span:nth-child(3) {
+  transform: rotateZ(45deg);
+  top: -25%;
+}
+@media (min-width: 576px) {
+  .my-header .hamburger {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+.my-header .links-main li:not(:first-child) {
+  margin-top: 1.25rem;
+}
+.my-header .links-main a {
+  font-family: "Panton-SemiBold";
+  color: #eee;
+  font-size: 1.5625rem;
+}
+@media (min-width: 576px) {
+  .my-header .links-main a {
+    font-size: 3.3125rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .my-header .links-main a {
+    font-size: 2.8125rem;
+  }
+}
+.my-header .small-links {
+  margin-top: 1.25rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.my-header .small-links a {
+  font-family: "Panton-SemiBold";
+  color: #eee;
+  font-size: 1.0625rem;
+}
+@media (min-width: 576px) {
+  .my-header .small-links a {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .my-header .small-links a {
+    font-size: 1.5rem;
+  }
+}
+.my-header .logo {
+  position: relative;
+  width: 40vw;
+}
+@media (min-width: 576px) {
+  .my-header {
+    padding: 3.125rem;
+    height: 20vh;
+  }
+  .my-header .my-nav {
+    flex-direction: row;
+  }
+  .my-header li {
+    margin: 3.125rem;
+  }
+  .my-header .small-links {
+    flex-direction: column;
+    width: auto;
+  }
+  .my-header .logo {
+    width: 15vw;
+  }
+}
+@media (min-width: 576px) and (max-width: 769px) {
+  .my-header .logo {
+    width: 35vw;
+  }
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  height: 80vh;
+  background: url("../img/paulo-dybala-juventus-2019-20_1d7jqc6tnjgxx1r0qucny2l6ev.png") no-repeat;
+  background-color: rgba(17, 17, 17, 0.3);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .banner {
+    text-align: left;
+    height: 100vh;
+  }
+}
+
+.about {
+  text-align: center;
+  margin: 3.75rem 0 2.5rem;
+  padding: 1.25rem;
+}
+.about p, .about h2 {
+  margin-top: 0.625rem;
+}
+@media (min-width: 576px) {
+  .about {
+    padding: 3.125rem;
+    text-align: left;
+    margin: 9.375rem 0;
+  }
+  .about p, .about h2 {
+    margin-top: 3.125rem;
+  }
+  .about .about-content {
+    width: 60%;
+  }
+  .about h2 {
+    width: 40%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .about h2, .about .about-content {
+    width: 100%;
+  }
+}
+
+.entertain {
+  padding: 1.25rem;
+  margin: 3.75rem 0 2.5rem 0;
+  text-align: center;
+}
+.entertain .show {
+  position: relative;
+  margin-top: 4vh;
+}
+.entertain .show img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.entertain .show span, .entertain .show hr, .entertain .show h5 {
+  color: #eee;
+  margin: 0;
+  padding: 5px;
+}
+.entertain .show hr {
+  margin: 0;
+  padding: 0;
+}
+.entertain .show .overlay {
+  position: absolute;
+  padding: 0.625rem 0.4166666667rem;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  transition: 400ms ease;
+  opacity: 1;
+  background-color: rgba(17, 17, 17, 0.9);
+}
+@media (min-width: 576px) {
+  .entertain .show {
+    margin: 0;
+  }
+  .entertain .show .overlay {
+    padding: 0.78125rem 1.5625rem;
+    opacity: 0;
+  }
+  .entertain .show:hover .overlay {
+    opacity: 1;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .entertain .show .overlay {
+    opacity: 1;
+  }
+}
+@media (min-width: 576px) {
+  .entertain {
+    padding: 3.125rem;
+    text-align: left;
+    margin: 0;
+  }
+  .entertain p, .entertain h2 {
+    margin-top: 3.125rem;
+  }
+  .entertain .rule {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.sports {
+  padding: 1.25rem;
+  margin: 3.75rem 0 2.5rem;
+  text-align: center;
+}
+.sports .show {
+  position: relative;
+  margin-top: 4vh;
+}
+.sports .show img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sports .show span, .sports .show hr, .sports .show h5 {
+  color: #eee;
+  margin: 0;
+  padding: 5px;
+}
+.sports .show hr {
+  margin: 0;
+  padding: 0;
+}
+.sports .show .overlay {
+  position: absolute;
+  padding: 0.625rem 0.4166666667rem;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  transition: 400ms ease;
+  opacity: 1;
+  background-color: rgba(17, 17, 17, 0.9);
+}
+@media (min-width: 576px) {
+  .sports .show {
+    margin: 0;
+  }
+  .sports .show .overlay {
+    padding: 0.78125rem 1.5625rem;
+    opacity: 0;
+  }
+  .sports .show:hover .overlay {
+    opacity: 1;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .sports .show .overlay {
+    opacity: 1;
+  }
+}
+@media (min-width: 576px) {
+  .sports {
+    padding: 3.125rem;
+    text-align: left;
+    margin: 0;
+  }
+  .sports p, .sports h2 {
+    margin-top: 3.125rem;
+  }
+  .sports .rule {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.brands {
+  padding: 2.5rem 0.625rem;
+}
+.brands .brands-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.brands img {
+  width: 33%;
+  margin: 0 0.625rem;
+}
+@media (min-width: 576px) {
+  .brands {
+    padding: 9.375rem 1.5625rem 0;
+  }
+  .brands .brands-inner {
+    margin: 9.375rem 0;
+  }
+  .brands img {
+    margin: 0;
+    height: 15vh;
+    margin: 3.125rem 0;
+  }
+}
+
+.my-footer {
+  padding: 2.5rem 0.78125rem;
+  background-color: #000;
+  color: #eee;
+  text-align: center;
+}
+.my-footer .logo {
+  width: 45vw;
+  margin: auto;
+}
+.my-footer hr {
+  margin: 2.5rem 0;
+  height: 3px;
+  opacity: 1;
+  color: #eee;
+}
+.my-footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.my-footer a {
+  margin: 0 1.25rem;
+}
+@media (min-width: 576px) {
+  .my-footer {
+    padding: 0 6.25rem;
+    padding-bottom: 1.5625rem;
+  }
+  .my-footer hr {
+    margin: 0;
+  }
+  .my-footer .logo {
+    width: 25vw;
+  }
+  .my-footer img {
+    margin: 3.125rem 0;
+  }
+  .my-footer .footer-nav {
+    margin: 1.5625rem 0;
+  }
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  background-color: transparent;
+}
+
+.sk-three-bounce {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(17, 17, 17, 0.85);
+}
+
+.sk-three-bounce .sk-child {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: #eee;
+  -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+          animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+}
+.sk-three-bounce .sk-bounce1 {
+  -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+.sk-three-bounce .sk-bounce2 {
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    background-color: #eee;
+  }
+  40% {
+    transform: scale(1);
+    background-color: #8d22ff;
+  }
+}
+
+@keyframes sk-three-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    background-color: #eee;
+  }
+  40% {
+    transform: scale(1);
+    background-color: #8d22ff;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,154 @@
+@import 'style';
+
+
+// Banner Section
+.banner{
+    background-image: url('../img/william-daigneault-Cd84YdL9px8-unsplash.png');
+    padding: $space-sm;
+    h1{
+        @include text(
+        $text-semi, 
+        $color-white,
+        1.375rem /* 22/16 */ ,
+        2.5rem /* 40/16 */ ,
+        3.3125rem /* 53/16 */
+         );
+    }
+
+    @media (min-width:576px) {
+        h1{
+            width: 70%;
+        }
+    }
+}
+
+// Banner End
+
+
+// About Section
+.about{
+    @media (min-width:576px) {
+        margin-bottom: $space-lg*2;
+        h2{
+            width: 32%;
+        }
+    }
+}
+// About End
+
+
+
+// Portfolio Section
+
+.portfolio{
+    background-color: $color-gray;
+    margin: 0;
+
+    .my-btn{
+        margin-top: $space-sm;
+    }
+
+    @media (min-width:576px) {
+        padding: $space-lg*3 $space-lg $space-lg;
+        .my-btn{
+            margin-top: $space-lg*2;
+        }
+    }
+}
+
+// Portfolio End
+
+// Talent Roster
+.talent-roster{
+    .about-inner{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .context{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: $space-sm 0;
+        }
+        h2{
+            margin: 0;
+            margin-bottom: $space-sm;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        li{
+            width: 45%;
+        }
+    }
+    .my-btn{
+        width: 45%;
+    }
+
+    @media (min-width:576px) {
+        margin: $space-lg 0;
+        
+        .about-inner{
+            flex-direction: row;
+            .context{
+                flex-direction: row;
+                margin-top: $space-lg/2;
+            }
+            
+            h2{
+                margin: 0;
+            }
+            ul{
+                width: 60%;
+            }
+            li{
+                width: 33%;
+                margin-top: $space-lg/3;
+            }
+        }
+
+        .my-btn{
+            width: 40%;
+        }
+
+    }
+}
+// Talent Roster End
+
+
+// Contact Section
+.contact{
+    background-color: $color-gray;
+    h2{
+        text-align: center;
+    }
+    .context{
+        align-items: flex-start;
+    }
+    .about-inner{
+        li{
+            width: 100%;
+        }
+    }
+
+    @media (min-width:576px) {
+        margin-bottom: $space-lg*2;
+        .my-btn{
+            width: 15%;
+        }
+        .about-inner{
+            li{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+// Contact End

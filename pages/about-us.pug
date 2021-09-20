@@ -1,0 +1,221 @@
+mixin btn(link,text)
+    a.my-btn(href=link)
+        span=text 
+        i.bi.bi-arrow-right
+
+mixin content(items)
+    for x in items 
+        .context    
+            h2=x[0] 
+            ul 
+                for y in x[1]
+                    li 
+                        span=y
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sphere
+        link(rel="stylesheet", href="../fonts/stylesheet.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        link(rel="stylesheet", href="../bsi/bootstrap-icons.css")
+        link(rel="stylesheet", href="../css/about-us.css")
+    body
+        //- Header Section
+        header.position-absolute.w-100.my-header.d-flex.justify-content-between.align-items-center
+            .hamburger
+                span 
+                span 
+                span 
+            nav.my-nav 
+                ul.links-main
+                    li
+                        a(href="../index.html") Portfolio
+                    li
+         
+                        a(href="#") About Us
+                    li
+                        a(href="./services.html")  Services
+
+                ul.small-links
+                    li
+                        a(href="./contact-us.html") Contact Us 
+                    li
+                        a(href="./about-sphere.html") Talent Roster
+
+            img.logo(src="../img/logo2.png", alt="")
+        //- Header End
+
+        //- Preloader
+        #preloader
+            .sk-three-bounce
+                .sk-child.sk-bounce1
+                .sk-child.sk-bounce2
+                .sk-child.sk-bounce3
+
+        //- Banner Section
+        section.banner.d-flex
+            h1. 
+                Sphere is one of the world's leading talent 
+                and entertainment agency.We help the 
+                world’s most inspiring people make 
+                the world a more inspiring place.
+
+        //- Banner End
+
+
+        //- About Section
+        section.about   
+            p.section-title About Sphere
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                h2. 
+                    Sphere Agency's story
+                .about-content 
+                    p. 
+                        Positioned at the nexus of talent, content, brands, technology, sports, 
+                        and live events, Sphere creates limitless opportunities for the storytellers, 
+                        trendsetters, icons, and thought leaders who shape popular culture.
+
+                    p. 
+                        Across film, television, music, sports, digital media, marketing, and
+                        beyond, we represent thousands of the world’s leading actors, 
+                        directors, writers, producers, musical artists, comedians, authors, 
+                        athletes, coaches, broadcasters, teams, leagues, chefs, 
+                        designers, fashion talent, consumer brands, and more.
+                    +btn("./services.pug", "Services")
+        //- About  End
+
+        //- Portfolio Section
+        section.about.portfolio
+            p.section-title Portfolio
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                h2. 
+                    We ensure talent is
+                    developed to its
+                    fullest potential
+                .about-content 
+                    p. 
+                        We manage talent from vast sectors which include arts and entertainment
+                        as well as the world of sporting
+                    p. 
+                        Our portfolio brands include NBA team Dallas Mavericks, Italian football
+                        giants AS Roma, the massive sports giant Nike, offroading lifers Jeep,
+                        53 time top 100 billboard song producers Interscope Records as well as
+                        A Kevin Hart Film. 
+                    +btn("../index.html","View All")
+
+        //- Portfolio End 
+
+        //- Talent Roster Section
+        section.about.talent-roster
+            p.section-title Sphere Talent Roster
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                +content(
+                    [
+                        [
+                            "Entertainment",
+                            [
+                                "Mario Speedwagon.",
+                                "Petey Cruiser.",
+                                "Anna Sthesia.",
+                                "Paul Molive.",
+                                "Gail Forcewind.",
+                                "Paige Turner.",
+                                "Mario Speedwagon.",
+                                "Petey Cruiser.",
+                                "Anna Sthesia.",
+                                "Paul Molive.",
+                                "Gail Forcewind.",
+                                "Paige Turner.",
+                            ]
+                        ],
+                        [
+                            "Sports",
+                            [
+                                "Mario Speedwagon.",
+                                "Petey Cruiser.",
+                                "Anna Sthesia.",
+                                "Paul Molive.",
+                                "Gail Forcewind.",
+                                "Paige Turner.",
+                                "Mario Speedwagon.",
+                                "Petey Cruiser.",
+                                "Anna Sthesia.",
+                                "Paul Molive.",
+                                "Gail Forcewind.",
+                                "Paige Turner.",
+                            ]
+                        ]
+                    ]
+                )
+
+        //- Talent Roster End
+
+        //- Contact Section
+
+        section.about.talent-roster.contact 
+            p Contact Us
+            hr
+            .about-inner.d-flex.flex-column.flex-lg-row 
+                +content(
+                    [
+                        [
+                            "New York",
+                            [
+                                "12 Hammersmith Grove",
+                                "London W6 7AP",
+                                "United Kingdom",
+                                "t: +44 20 8846 3000 f: +44 20 8846 3090",
+                            ]
+                        ],
+                        [
+                            "New York",
+                            [
+                                "12 Hammersmith Grove",
+                                "London W6 7AP",
+                                "United Kingdom",
+                                "t: +44 20 8846 3000 f: +44 20 8846 3090",
+                            ]
+                        ],
+                        [
+                            "New York",
+                            [
+                                "12 Hammersmith Grove",
+                                "London W6 7AP",
+                                "United Kingdom",
+                                "t: +44 20 8846 3000 f: +44 20 8846 3090",
+                            ]
+                        ]
+                    ]
+                ) 
+                +btn("../index.html","View All")
+
+
+
+
+        //- Contact End
+
+
+         //- Footer Section
+        footer.my-footer 
+            .logo
+                img.img-fluid(src="../img/logo1.png", alt="")
+            hr
+            nav.footer-nav
+                a(href="#") Contact Us 
+                a(href="") Portfolio
+                a(href="") For Brands
+                a(href="") For Talent 
+        //- Footer End
+
+
+        script(src="../js/jquery-2.2.0.min.js")
+        script(src="../js/bootstrap.bundle.min.js") 
+        script(src="../js/main.js") 
