@@ -401,12 +401,11 @@ hr{
     }
 
     @media (min-width:576px) {
-        padding: $space-lg;
         text-align: left;
         margin : $space-lg*2 0 0;
        
         .about-inner{
-            margin-top: $space-lg;
+            padding: $space-lg; 
         }
         .about-content{
             width: 60%;
@@ -448,7 +447,7 @@ hr{
 
 
     @media (min-width:576px) {
-        padding: $space-lg;
+        padding: 0 $space-lg;
         text-align: left;
         margin : 0 ;
         height: 80vh;
@@ -494,6 +493,7 @@ hr{
 
         .sports-inner{
             padding: 0 $space-lg;
+            margin-top: $space-lg;
            
         }
 
